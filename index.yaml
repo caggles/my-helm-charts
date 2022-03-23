@@ -1,9 +1,36 @@
 apiVersion: v1
 entries:
+  mission-control:
+  - apiVersion: v2
+    appVersion: 4.7.16
+    created: "2022-03-23T16:16:31.09645-07:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.18
+    description: A Helm chart for JFrog Mission Control
+    digest: f25b5dbdf5eed61900c7faabd0c562cfb2cfe8061c609d22dd8aa72d42b8db94
+    home: https://jfrog.com/mission-control/
+    icon: https://raw.githubusercontent.com/jfrog/charts/master/stable/mission-control/logo/jfmc-logo.png
+    keywords:
+    - mission-control
+    - jfrog
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - email: installers@jfrog.com
+      name: Chart Maintainers at JFrog
+    name: mission-control
+    sources:
+    - https://github.com/jfrog/charts
+    type: application
+    urls:
+    - mission-control-104.7.16.tgz
+    version: 104.7.16
   xray:
   - apiVersion: v2
-    appVersion: 3.32.2
-    created: "2021-09-10T11:33:18.324676-07:00"
+    appVersion: 3.44.1
+    created: "2022-03-23T16:16:31.12293-07:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -15,7 +42,38 @@ entries:
       version: 8.11.4
     description: Universal component scan for security and license inventory and impact
       analysis
-    digest: 256f6b4475f6224839178387039ff6b1da810ea4c0f57f9e88c5cf98197abb8d
+    digest: 7d5a25a747024466a129f33b44198e4a5371981d99cda618c80e78d1b4204bce
+    home: https://www.jfrog.com/xray/
+    icon: https://raw.githubusercontent.com/jfrog/charts/master/stable/xray/logo/xray-logo.png
+    keywords:
+    - xray
+    - jfrog
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - email: installers@jfrog.com
+      name: Chart Maintainers at JFrog
+    name: xray
+    sources:
+    - https://github.com/jfrog/charts
+    type: application
+    urls:
+    - xray-103.44.1.tgz
+    version: 103.44.1
+  - apiVersion: v2
+    appVersion: 3.32.2
+    created: "2022-03-23T16:16:31.110561-07:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.18
+    - condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.11.4
+    description: Universal component scan for security and license inventory and impact
+      analysis
+    digest: d05c1b46426f9eeb25da8b77df856483ccc05d9242cd76621aad205cd7d42744
     home: https://www.jfrog.com/xray/
     icon: https://raw.githubusercontent.com/jfrog/charts/master/stable/xray/logo/xray-logo.png
     keywords:
@@ -29,6 +87,6 @@ entries:
     - https://github.com/jfrog/charts
     type: application
     urls:
-    - https://caggles.github.io/my-helm-charts/xray-103.32.2.tgz
+    - xray-103.32.2.tgz
     version: 103.32.2
-generated: "2021-09-10T11:33:18.311399-07:00"
+generated: "2022-03-23T16:16:31.081877-07:00"
